@@ -28,12 +28,7 @@
         title: 'Send to Transmission',
         contexts: ['link'],
         onclick: function(info, tab) {
-            chrome.windows.create({
-                url: 'download.html#' + info.linkUrl,
-                type: 'popup',
-                width: 700,
-                height: 700
-            });
+            new TransmissionController(info.linkUrl);
         }
     });
 

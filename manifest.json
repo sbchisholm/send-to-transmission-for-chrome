@@ -1,14 +1,20 @@
 {
 	"manifest_version": 2,
 	
-	"name": "Send to Transmission",
+	"name": "Send to Transmission (No Questions Asked)",
 	"description": "Simply send torrent files to remote Transmission server within few clicks.",
-	"version": "0.8.0.3",
+	"version": "13.3.8.1",
 	
 	"permissions": ["contextMenus", "tabs", "http://*/", "https://*/"],
 	
 	"background": {
-		"scripts": ["script/background.js"]
+		"scripts": ["lib/jquery-1.7.1.min.js",
+                "script/bencode.js",
+                "script/torrent.js",
+                "script/transmission.js",
+                "script/settings.js",
+                "script/download.js",
+                "script/background.js"]
 	},
 	"options_page": "options.html",
 	"icons": {
